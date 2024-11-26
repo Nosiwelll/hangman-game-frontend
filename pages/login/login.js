@@ -36,9 +36,6 @@ document.getElementById("btn-login").addEventListener("click", async function (e
             console.error(`HTTP Error: ${response.status}`);
             const errorDetails = await response.text();
             console.error(`Details: ${errorDetails}`);
-        } else {
-            const data = await response.json();
-            console.log(data);
         }
         
 
