@@ -77,12 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Enviando dados para iniciar o jogo:", { Tema_ID: parseInt(Tema_ID, 10), Nome, User_ID });
 
         try {
-            const response = await fetch("http://hangman-game-backend.azurewebsites.net/game/start", {
+            const response = await fetch("https://hangman-game-backend.onrender.com/game/start", {
                 method: "POST",
                 headers: {
 
                     "Content-Type": "application/json",
-                     "Allow-Origin": "*"
                 },
                 body: JSON.stringify({ Tema_ID: parseInt(Tema_ID, 10), Nome, User_ID })
             });

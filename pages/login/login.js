@@ -24,7 +24,7 @@ document.getElementById("btn-login").addEventListener("click", async function (e
 
     try {
         debugger
-        const response = await fetch("https://hangman-game-backend.azurewebsites.net/usuarios/login", {
+        const response = await fetch("https://hangman-game-backend.onrender.com/usuarios/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
