@@ -24,11 +24,11 @@
   }
 
   .timer-label {
-      font-size: 2rem;
+      font-size: 1.5rem;
   }
 
   #timer {
-      font-size: 1.5rem;
+      font-size: 1rem;
   }
 
   .player-icon .player-name {
@@ -193,8 +193,8 @@
   
     #tema-faroeste .passaro-img {
       position: relative;
-      width: 220px; /* Ajuste o tamanho conforme necessário */
+      width: 110px; /* Ajuste o tamanho conforme necessário */
       height: auto;
-      left: 50px;
+      left: 100px;
     }
   }

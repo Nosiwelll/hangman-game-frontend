@@ -149,10 +149,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Função para enviar um palpite
   window.selectLetter = function (letter) {
-    fetch("https://hangman-game-backend.onrender.com/party/guess", {
+    fetch("http://hangman-game-backend.azurewebsites.net/party/guess", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Allow-Origin": "*"
       },
       body: JSON.stringify({
         session_id: sessionId,

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=VT323&display=swap');
 
   /* Centraliza a div da palavra na tela e ajusta a posição */
    .palavra-container {
@@ -96,16 +98,22 @@
 
 
 #turno-indicador {
+  color: #ffffff; /* Um tom quente que contrasta com o fundo */
   text-align: center; 
-  font-size: 1.3rem; 
+  font-size: 2.5rem; 
   font-weight: bold; 
   margin-top: 20px;
-  font-family: 'Press Start 2P';
+  font-family: 'VT323';
+  letter-spacing: 0.7vh;
   text-shadow: 
-    1px 1px 0px #ff0000,  /* Vermelho */
-    2px 2px 0px #00ff00,  /* Verde */
-    3px 3px 0px #0000ff,  /* Azul */
-    4px 4px 0px #ffa500,  /* Laranja */
-    5px 5px 5px rgba(0, 0, 0, 0.5); /* Sombra suave para profundidade */
+  -2px -2px 0 #000,  /* Contorno preto superior esquerdo */
+  2px -2px 0 #000,  /* Contorno preto superior direito */
+ -2px  2px 0 #000,  /* Contorno preto inferior esquerdo */
+  2px  2px 0 #000,  /* Contorno preto inferior direito */
+ -2px  0px 0 #000,  /* Contorno preto à esquerda */
+  2px  0px 0 #000,  /* Contorno preto à direita */
+  0px -2px 0 #000,  /* Contorno preto acima */
+  0px  2px 0 #000;  /* Contorno preto abaixo */
 }
+
 
