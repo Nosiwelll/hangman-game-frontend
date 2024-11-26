@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+:root {
+  --escala-geral: 1.35; /* Aumente para escalar globalmente */
+}
+
+/* Essa classe está escondendo a tela de vitória/derrota   */
+
+.hidden { 
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Conteúdo da modal */
+.modal-content {
+  background: url('../img/faroeste_telaVitoriaDerrota.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  width: 180%;
+  height: 80%;
+  max-width: 1200px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.elementos-modal {
+  padding-top: 240px;
+}
+
+/* Botões */
+
+.botoes {
+  display: flex; /* Alinha os botões em uma linha */
+  justify-content: center; /* Centraliza os botões no contêiner */
+  gap: 20px; /* Define o espaçamento horizontal entre os botões */
+  margin: 5%;
+}
+
+.botoes button {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 50px;
+  width: 250px;
+  max-width: 250px;
+  border: none;
+  box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.7);
+  background: #F16C5F;
+  transition: background 0.3s, color 0.3s;
+  margin: 0 50px;
+  font-family: 'Press Start 2P', cursive; /* A pixel font */
+  box-shadow: 
+    inset -1px 1px 1px 1px rgb(255, 255, 255),
+    inset -1px -1px 1px 1px rgb(255, 255, 255),
+    inset 1px 0px 1px 1px rgb(255, 255, 255);  
+    border-radius: 30px;
+}
+
+.botoes button:hover {
+  color: #F16C5F;
+  background: #fff;
+}
+
+.botoes button:active {
+  top: 5px;
+  box-shadow: 
+  -4px 2px 1px 1px grey,
+  -4px -2px 1px 1px lightgray,
+  4px 0px 1px 1px lightgray; 
+}
+
+.vitoria-ou-derrota {
+  transform: scale(var(--escala-geral));
+  font-size: calc(3rem * var(--escala-geral));
+}
+
+.tempo-decorrido {
+  transform: scale(var(--escala-geral));
+  font-size: calc(1rem * var(--escala-geral));
+}
+
+.botoes button {
+  transform: scale(var(--escala-geral));
+  font-size: calc(0.65rem * var(--escala-geral));
+  width: calc(180px * var(--escala-geral));
+}
+
+.botoes {
+  margin: calc(5% * var(--escala-geral));
+}
+
+.botoes button {
+  line-height: calc(42px * var(--escala-geral));
+}

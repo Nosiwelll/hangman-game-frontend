@@ -1,0 +1,86 @@
+/* Estilos do Modal */
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    width: 250px; /* Largura */
+    height: 250px; /* Altura */
+    border-radius: 17px;
+    border: 4px solid #ff6b6b; /* Adicionando borda */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilos para os botões dentro do Modal */
+.modal-button {
+    background-color: #ff6b6b; /* Cor de fundo personalizada */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Borda arredondada */
+    padding: 15px 20px; /* Aumentando o espaçamento interno */
+    font-size: 22px; /* Aumentando o tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    margin: 10px 0; /* Espaço entre os botões */
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s; /* Transição suave */
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra escura projetada */
+    width: 100%; /* Mesma largura para todos os botões */
+    max-width: 200px; /* Garantindo limite de largura */
+    text-align: center; /* Centralizando texto */
+}
+
+.modal-button:hover {
+    background-color: #ff4b4b; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Efeito de "zoom" */
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4); /* Sombra mais intensa ao passar o mouse */
+}
+
+.modal-button:active {
+    transform: scale(0.95); /* Efeito de pressionar */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida ao pressionar */
+}
+
+/* Estilos para o botão de fechar */
+.close-button {
+    background-color: #ffffff; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px; /* Posiciona no canto superior */
+    right: 10px; /* Posiciona no canto direito */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.close-button:hover {
+    background-color: #ff6969;
+    transform: scale(1.1); /* Leve aumento no hover */
+}
+
+.close-button:active {
+    transform: scale(0.9); /* Efeito de pressionar */
+}
+
+/* Fundo escurecido */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Fundo escurecido */
+    z-index: 999;
+}

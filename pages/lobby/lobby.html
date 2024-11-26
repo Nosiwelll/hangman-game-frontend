@@ -1,0 +1,293 @@
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Jogo Interativo com loja, temas e itens de poder">
+  <meta name="author" content="Seu Nome ou Sua Empresa">
+
+  <link rel="stylesheet" href="../../css/lobbyStyle.css" />
+  <link rel="stylesheet" href="../../css/loja.css">
+  <link rel="stylesheet" href="../../css/seletorTemas.css">
+  <link rel="stylesheet" href="../../css/temasLobby.css">
+  <link rel="stylesheet" href="../../css/modalConfiguracaoLobby.css">
+  <link rel="stylesheet" href="../../css/modalJogador.css">
+
+  <link rel="stylesheet" href="lobby.css">
+
+  <title>HangGame - Lobby</title>
+
+  <link rel="icon" href="../../img/jdoLogo1.png" type="image/x-icon">
+</head>
+
+<body class="loby">
+  <div class="div">
+    <header class="header2">
+      <ol id="minha-lista-2">
+        <div class="btn-status">
+          <li id="btn-coin">
+            <img src="../../img/moeda.png" alt="Item 2">
+            <span class="contador">0</span>
+          </li>
+          <li id="btn-diamante">
+            <img src="../../img/diamante.png" alt="Item 3">
+            <span class="contador">0</span>
+          </li>
+          <li id="btn-vida">
+            <img id="coracao" src="../../img/coracao.png" alt="Item 1">
+            <span class="contador">0</span>
+          </li>
+          <li id="btn-dica">
+            <img id="lampada" src="../../img/lampada.png" alt="Item 4">
+            <span class="contador">0</span>
+          </li>
+          <li id="btn-distacao">
+            <img id="lampada" src="../../img/distracao.png" alt="Item 4">
+            <span class="contador">0</span>
+          </li>
+        </div>
+      </ol>
+
+      <div id="user-config-section">
+
+        <!-- Botão de perfil -->
+        <li id="lista-usuario">
+          <a href="#" onclick="openUserConfigModal()">
+            <img src="../../img/usuario_sem_fundo.png" alt="Perfil" class="img-usuario"
+              onclick="changeUserIcon('../../img/usuario_sem_fundo.png')">
+          </a>
+        </li>
+
+        <!-- Botão de configurações -->
+        <li id="btn-config">
+          <a href="#" onclick="openModal()">
+            <img src="../../img/config.png" alt="Configurações" class="img-config">
+          </a>
+        </li>
+
+        <!-- Botão de som -->
+        <button id="sound-toggle">
+          <i id="sound-icon" class="fas fa-volume-up"></i>
+        </button>
+
+      </div>
+
+
+
+      <!-- Overlay e Modal de Configurações -->
+      <div class="modal-overlay hidden" onclick="closeModal()"></div> <!-- Overlay -->
+      <!-- Modal de Configurações -->
+      <div id="config-modal" class="modal hidden">
+        <button class="close-button" onclick="closeModal()">&times;</button>
+        <h2>Configurações</h2>
+        <button class="modal-button">Menu Principal</button>
+        <button class="modal-button" onclick="exitGame()">Sair do Jogo</button>
+      </div>
+  </div>
+  </header>
+  </div>
+
+  <!-- Modal de Configuração do Usuário -->
+  <div id="user-config-modal" class="user-modal hidden">
+    <div id="user-modal-content">
+      <button id="user-close-button" onclick="closeUserConfigModal()">&times;</button>
+
+      <!-- Ícone do usuário e Nome do usuário -->
+      <div id="user-info">
+        <img src="../../img/usuario_sem_fundo.png" alt="Ícone do Usuário" id="user-icon"
+          onclick="changeUserIcon('../../img/usuario_sem_fundo.png')">
+        <h2 id="user-name-title">Apelido do usuário</h2>
+      </div>
+
+      <!-- Campos para alterar o nome de usuário e senha -->
+      <div id="user-edit-fields">
+        <div class="user-edit-field">
+          <input type="text" placeholder="Novo apelido" id="username">
+          <button id="btn-alterar-username" onclick="alterarNomeUsuario()">Alterar</button>
+        </div>
+      </div>
+
+      <h3>Altere seu Ícone:</h3>
+
+      <!-- Seleção de ícones de perfil -->
+      <div id="icon-selection">
+        <img src="../../img/icone_Faroeste.png" alt="Ícone Faroeste" class="icon-option"
+          onclick="changeUserIcon('../../img/icone_Faroeste.png')">
+        <img src="../../img/icone_natal.png" alt="Ícone Natal" class="icon-option"
+          onclick="changeUserIcon('../../img/icone_natal.png')">
+        <img src="../../img/icone_halloween.png" alt="Ícone Halloween" class="icon-option"
+          onclick="changeUserIcon('../../img/icone_halloween.png')">
+        <img src="../../img/icone_fundoMar.png" alt="Ícone Fundo do Mar" class="icon-option"
+          onclick="changeUserIcon('../../img/icone_fundoMar.png')">
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <img class="logo-hang" src="../../img/jdoLogo2.png" alt="logo-imagem">
+  </div>
+  <div>
+    <dialog id="meuDialog">
+      <header>
+        <img src="../../img/usuario_sem_fundo.png" alt="Item 1" class="img-usuario-dialog"
+          onclick="changeUserIcon('../../img/usuario_sem_fundo.png')">
+        <span class="nome_usuario"></span>
+        <div class="btn-status-dialog">
+          <li id="btn-coracao-dialog">
+            <img id="coracao" src="../../img/coracao.png" alt="Item 1">
+          </li>
+          <li id="btn-coin-dialog">
+            <img src="../../img/moeda.png" alt="Item 1">
+          </li>
+          <li id="btn-diamante-dialog">
+            <img src="../../img/coracao.png" alt="Item 1">
+          </li>
+          <li id="btn-poder-dialog">
+            <img src="../../img/coracao.png" alt="Item 1">
+          </li>
+        </div>
+      </header>
+      <button id="fecharDialog">Fechar</button>
+    </dialog>
+
+    <!-- Botão para abrir o modal -->
+    <div id="lobby" class="lobby-default">
+      <div class="text-center-botoes">
+        <button class="abrirDialog" id="btn-selecionartema">Selecionar Tema</button>
+        <button id="btn-jogar">Jogar</button>
+      </div>
+    </div>
+
+    <!-- Modal de seleção de temas -->
+    <div id="theme-selector" class="modal hidden">
+      <h2>Selecione um Tema</h2>
+      <button class="theme-option" data-theme="default">Faroeste</button>
+      <button class="theme-option" data-theme="tema1">Natal</button>
+      <button class="theme-option" data-theme="tema2">Halloween</button>
+      <button class="theme-option" data-theme="tema3">Fundo do Mar</button>
+      <strong><button onclick="closeThemeSelector()">Fechar</button></strong>
+    </div>
+
+    <!-- Ícone da loja no canto inferior esquerdo -->
+    <div class="shop-icon">
+      <a href="#" onclick="openShopModal()">
+        <img src="../../img/elixir.png" alt="Ícone da Loja">
+      </a>
+    </div>
+
+    <!-- Modal da Loja -->
+    <div id="shop-modal" class="shop-modal">
+      <div class="shop-content">
+        <!-- Botão de Fechar -->
+        <button class="close-button" onclick="closeShopModal()">&times;</button>
+        <h2 class="shop-title">
+          <img src="../../img/elixir.png" alt="Ícone da Loja" class="icon-shop-title">
+          Loja
+        </h2>
+
+        <!-- Informações do usuário com o ícone de perfil e o nome ao lado -->
+        <div class="user-info">
+          <div class="profile-info">
+            <img src="../../img/usuario_sem_fundo.png" alt="Ícone do Usuário" class="user-icon"
+              onclick="changeUserIcon('../../img/usuario_sem_fundo.png')">
+            <p id="user-name">Jogador1</p>
+          </div>
+          <div class="user-items">
+            <div><img src="../../img/moeda.png" alt="Moedas"> <span id="btn-coin">0</span></div>
+            <div><img src="../../img/diamante.png" alt="Diamantes"> <span id="btn-diamante">0</span></div>
+            <div><img id="coracao" src="../../img/coracao.png" alt="Corações"> <span id="btn-vida">0</span></div>
+            <div><img id="lampada" src="../../img/lampada.png" alt="Poder"> <span id="btn-dica">0</span></div>
+            <div><img id="distracao" src="../../img/distracao.png" alt="Poder"> <span id="btn-distacao">0</span></div>
+          </div>
+        </div>
+
+        <h3>Itens Disponíveis</h3>
+        <ul class="item-list">
+          <li class="shop-item">
+            <img src="../../img/diamante.png" alt="Diamante">
+            <span>Diamante x100</span>
+            <button onclick="buyItem('diamante', 2499)">R$24,99</button>
+          </li>
+
+          <li class="shop-item">
+            <img src="../../img/diamante.png" alt="Diamante">
+            <span>Diamante x250</span>
+            <button onclick="buyItem('diamante', 5999)">R$59,99</button>
+          </li>
+
+                  <!-- Moedas -->
+        <li class="shop-item">
+          <img src="../../img/moeda.png" alt="moeda">
+          <span>Moedas x100</span>
+          <button onclick="buyItem('moedas', 30, 100)">30
+            <img src="../../img/diamante.png" alt="Moeda" class="icon-moeda">
+          </button>
+        </li>
+
+        <li class="shop-item">
+          <img src="../../img/moeda.png" alt="moeda">
+          <span>Moedas x250</span>
+          <button onclick="buyItem('moedas', 75, 250)">75
+            <img src="../../img/diamante.png" alt="Moeda" class="icon-moeda">
+          </button>
+        </li>
+
+        <!-- Dica -->
+        <li class="shop-item">
+          <img id="dica" src="../../img/lampada.png" alt="dica">
+          <span>Dica x1</span>
+          <button onclick="buyItem('dica', 15, 1)">15
+            <img src="../../img/moeda.png" alt="Moeda" class="icon-moeda">
+          </button>
+        </li>
+
+        <li class="shop-item">
+          <img id="dica" src="../../img/lampada.png" alt="Poder">
+          <span>Dica x3</span>
+          <button onclick="buyItem('dica', 45, 3)">45
+            <img src="../../img/moeda.png" alt="Moeda" class="icon-moeda"></button>
+        </li>
+
+        <!-- Vida -->
+        <li class="shop-item">
+          <img id="coracao" src="../../img/coracao.png" alt="Vidas">
+          <span>Vida x1</span>
+          <button onclick="buyItem('vida', 30, 1)">30
+            <img src="../../img/moeda.png" alt="Moeda" class="icon-moeda">
+          </button>
+        </li>
+
+        <li class="shop-item">
+          <img id="coracao" src="../../img/coracao.png" alt="Vidas">
+          <span>Vida x3</span>
+          <button onclick="buyItem('vida', 90, 3)">90
+            <img src="../../img/moeda.png" alt="Moeda" class="icon-moeda">
+          </button>
+        </li>
+
+
+          <li class="shop-item">
+            <img id="distracao" src="../../img/distracao.png" alt="Distração">
+            <span>Distração x1</span>
+            <button onclick="buyItem('distracao', 25, 1, 'moedas')">25
+              <img src="../../img/moeda.png" alt="Moeda" class="icon-moeda">
+            </button>
+          </li>
+          
+          <li class="shop-item">
+            <img id="distracao" src="../../img/distracao.png" alt="Distração">
+            <span>Distração x3</span>
+            <button onclick="buyItem('distracao', 75, 3, 'moedas')">75
+              <img src="../../img/moeda.png" alt="Moeda" class="icon-moeda">
+            </button>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <script>
+  </script>
+    <script src="./loja.js"></script>
+    <script src="./lobby.js"></script>
+</body>

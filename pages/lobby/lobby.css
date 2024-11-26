@@ -1,0 +1,60 @@
+/* Container principal dos botões */
+#user-config-section {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row; /* Organiza os itens em uma linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 15px; /* Espaçamento horizontal entre os botões */
+    z-index: 1000; /* Garante que os botões fiquem acima de outros elementos */
+}
+
+/* Botão de som */
+#sound-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sound-icon {
+    font-size: 40px;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+#sound-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Botão de perfil */
+#lista-usuario {
+    width: 50px;
+    height: 50px;
+}
+
+.img-usuario {
+    padding-top: 8px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Botão de configurações */
+#btn-config {
+    width: 50px;
+    height: 50px;
+}
+
+.img-config {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}

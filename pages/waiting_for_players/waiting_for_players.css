@@ -1,0 +1,20 @@
+.sound-button {
+    position: absolute; /* Absoluto para posicionamento direto */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    background: none; /* Remove fundo */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Cursor de clique */
+    outline: none; /* Remove borda ao focar */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+  }
+
+  .sound-button i {
+    font-size: 40px; /* Aumenta o tamanho do ícone */
+    color: white; /* Cor branca para o ícone */
+    transition: transform 0.2s ease; /* Animação suave */
+  }
+
+  .sound-button i:hover {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+  }

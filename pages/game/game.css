@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+  /* Centraliza a div da palavra na tela e ajusta a posição */
+   .palavra-container {
+    height: 40px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: calc(100vh - 300px); /* Ajuste de altura para subir a palavra */
+    font-family: 'Press Start 2P', cursive; /* Fonte pixelada */
+    font-size: 3rem; /* Tamanho da fonte */
+    text-transform: uppercase; /* Letras em maiúsculas */
+    color: #ffcc00; /* Cor amarela para combinar com o tema */
+    text-shadow: 2px 2px 0px #000, 4px 4px 0px #ff6600; /* Efeito 3D */
+    background-color: transparent; /* Fundo transparente */
+    padding-left: 100px;
+  }
+
+  /* Adiciona espaçamento entre letras */
+  .palavra-container span {
+    height: 40px;
+    margin: 0 5px; /* Espaçamento entre as letras */
+  }
+
+  /* Ajusta a posição e o comportamento do teclado */
+  .keyboard {
+  position: relative; /* Garante que o z-index funcione */
+  z-index: 9999; /* Coloca o teclado acima de todos os outros elementos */
+}
+
+/* Estilo para o painel de madeira contendo o timer */
+#painel_madeira {
+  position: relative; /* Permite o posicionamento central do conteúdo interno */
+  display: inline-block; /* Adapta o tamanho do elemento conforme o conteúdo */
+}
+
+#painel_madeira img {
+  width: 250px; /* Aumente ou diminua este valor para ajustar a largura */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block;
+}
+
+/* Estilo principal para o container do timer */
+#timer-container {
+  position: fixed; /* Garante posição fixa na tela */
+  bottom: 10px; /* Posiciona na parte inferior da tela */
+  left: 10px; /* Posiciona na lateral esquerda da tela */
+  z-index: 9999; /* Garante que esteja acima de outros elementos */
+  pointer-events: none; /* Impede interferência em cliques */
+}
+
+#timer-container img {
+  width: 200px; /* Ajusta o tamanho da placa */
+  height: auto; /* Mantém a proporção */
+}
+
+/* Estilo do conteúdo do timer */
+.timer-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza o conteúdo exatamente no meio */
+  text-align: center;
+  color: #fffb07;
+  font-family: 'Press Start 2P', cursive; /* Fonte pixelada */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Melhor legibilidade */
+  padding-bottom: 20px;
+}
+
+/* Estilo específico para os textos */
+.timer-label,
+#timer {
+  color: #ffe600; /* Cor do texto */
+  text-shadow: 
+    -1px -1px 0 #000,  /* Contorno preto para cima e à esquerda */
+    1px -1px 0 #000,   /* Contorno preto para cima e à direita */
+    -1px 1px 0 #000,   /* Contorno preto para baixo e à esquerda */
+    1px 1px 0 #000,    /* Contorno preto para baixo e à direita */
+    2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra adicional */
+  font-family: 'Press Start 2P', cursive; /* Garante a fonte pixelada */
+  font-weight: bold;
+  gap:10px;
+}
+
+/* Estilo adicional para o título "TEMPO" */
+.timer-label {
+  display: block;
+  font-size: 1.7rem; /* Tamanho ajustado */
+  margin-bottom: 15px;
+}
+
+/* Estilo adicional para o cronômetro "0:00" */
+#timer {
+  font-size: 1.2rem; /* Tamanho ajustado */
+}
+
+
+#turno-indicador {
+  text-align: center; 
+  font-size: 1.3rem; 
+  font-weight: bold; 
+  margin-top: 20px;
+  font-family: 'Press Start 2P';
+  text-shadow: 
+    1px 1px 0px #ff0000,  /* Vermelho */
+    2px 2px 0px #00ff00,  /* Verde */
+    3px 3px 0px #0000ff,  /* Azul */
+    4px 4px 0px #ffa500,  /* Laranja */
+    5px 5px 5px rgba(0, 0, 0, 0.5); /* Sombra suave para profundidade */
+}
+

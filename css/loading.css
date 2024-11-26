@@ -1,0 +1,91 @@
+.plutonita {
+  background: url("../img/plutonita.gif") center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 85% 100%;
+}
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px; /* Ajuste conforme necessário */
+  color: rgb(255, 255, 255); /* Ajuste a cor conforme necessário */
+  text-align: center;
+  font-weight: bolder;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Ajuste conforme necessário */
+}
+
+.text-left img,
+.text-right img {
+  top: 10px; /* Ajuste conforme necessário */
+  margin:30px 10px;
+}
+
+.text-left img{
+  width: 30%;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fundo escuro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0; /* Inicialmente invisível */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  background: #ffffff; /* Fundo branco */
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: 4px solid #6a0dad; /* Borda roxa */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.popup-content h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #6a0dad; /* Roxo para o título */
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #6a0dad; /* Roxo para o texto */
+}
+
+.btn-close {
+  padding: 10px 20px;
+  background: #6a0dad; /* Botão com cor roxa */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-close:hover {
+  background: #4a007a; /* Roxo mais escuro no hover */
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login</title>
+    
+    <link rel="stylesheet" href="../../css/crud.css" /> <!-- Link para o CSS principal -->
+    <link rel="stylesheet" href="./login.css" />
+
+    <link rel="icon" type="image/x-icon" href="../../../img/jdoLogo2.png" />
+</head>
+</head>
+<body class="fundoSelva">
+    <div class="text-center">
+        <img id="imgLogo" class="resize-img" draggable="false" src="../../img/jdoLogo1.png" width="20%" alt="Logo do Sistema" />
+    </div>
+
+    <div class="w-37 p-1em rounded d-block bg-white login-container">
+        <h2 class="titulo-destaque">LOGIN</h2>
+        <form class="form-container" action="">
+            <div class="form-grid mb-3">
+                <label for="login">Usuário</label>
+                <input class="input-reset" type="text" id="login" placeholder="Digite seu usuário" />
+        
+                <label for="senha">Senha</label>
+                <input class="input-reset" type="password" id="senha" placeholder="Digite sua senha" />
+            </div>
+        
+            <!-- Links para recuperação de senha e cadastro abaixo dos campos -->
+            <div class="text-center mt-1">
+                <a href="forgot_password.html" class="link-azul">Esqueceu sua senha?</a>
+                <br>
+                <a href="signup.html" class="link-azul">Esqueceu sua Não possui conta? Cadastre-se</a>
+            </div>
+        
+            <p class="msg-err text-center text-red"></p>
+        
+            <div class="mb-1 d-flex justify-around">
+                <button class="btn bg-red" type="button" id="btn-voltar" onclick="history.go(-1);">VOLTAR</button>
+                <button class="btn bg-green" type="submit" id="btn-login">ENTRAR</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Estrutura do Popup -->
+    <div id="popupSuccess" class="popup">
+        <div class="popup-content">
+            <h2>Login bem-sucedido!</h2>
+            <p>Bem-vindo(a) ao HangGame!</p>
+            <button class="btn-close">OK</button>
+        </div>
+    </div>
+    
+    <script src="./login.js"></script>
+</body>
+</html>

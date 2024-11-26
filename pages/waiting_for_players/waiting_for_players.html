@@ -1,0 +1,43 @@
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jogo Interativo com loja, temas e itens de poder">
+  <meta name="author" content="Seu Nome ou Sua Empresa">
+
+  <link rel="stylesheet" href="../../css/lobbyStyle.css" />
+  <link rel="stylesheet" href="../../css/loja.css">
+  <link rel="stylesheet" href=".././css/seletorTemas.css">
+  <link rel="stylesheet" href="../../css/temas.css">
+  <link rel="stylesheet" href="../../css/loading.css">
+  
+  <title>HangGame - em Espera</title>
+
+  <link rel="icon" href="../img/jdoLogo1.png" type="image/x-icon">
+</head>
+
+<body class="plutonita">
+  <div class="container">
+    <div class="text-left">
+      <img class="logo-hang-esperando" src="../../../img/jdoLogo2.png" alt="logo-imagem">
+    </div>
+  </div>
+  <div id="loading">Esperando por outro Jogador</div>
+
+  <!-- Botão de controle de som posicionado com HTML inline -->
+  <button id="sound-toggle" style="position: fixed; top: 10px; right: 10px; background: none; border: none; cursor: pointer;">
+    <i id="sound-icon" class="fas fa-volume-up" style="font-size: 40px; color: white;"></i>
+  </button>
+
+    <!-- Popup para início do jogo -->
+  <div id="popupGameStart" class="popup hidden">
+    <div class="popup-content">
+      <h2>O jogo começou!</h2>
+      <p>Prepare-se para desafiar seu oponente!</p>
+      <button class="btn-close">OK</button>
+    </div>
+  </div>
+  
+  <script src="../../pages/waiting_for_players/waiting_for_players.js"></script>
+</body>

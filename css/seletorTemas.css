@@ -1,0 +1,77 @@
+/* Estilos do Modal de Seleção de Temas */
+#theme-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px; /* Aumentando o espaçamento interno */
+    height: auto;
+    width: auto;
+    border-radius: 17px; /* Cantos arredondados */
+    border: 4px solid #ff6b6b; /* Borda personalizada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#theme-selector.hidden {
+    display: none;
+}
+
+/* Estilos para os botões dentro do modal */
+#theme-selector button.theme-option {
+    background-color: #ff6b6b; /* Cor de fundo personalizada */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Cantos arredondados */
+    padding: 15px 20px; /* Aumentando o espaçamento interno */
+    font-size: 22px; /* Aumentando o tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    margin: 7px 0; /* Espaço vertical uniforme entre os botões */
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s; /* Transições suaves */
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra projetada */
+    width: 100%; /* Mesma largura para todos os botões */
+    max-width: 200px; /* Largura máxima */
+    text-align: center; /* Centralizando texto */
+}
+
+#theme-selector button.theme-option:hover {
+    background-color: #ff4b4b; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Efeito de "zoom" */
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+}
+
+#theme-selector button.theme-option:active {
+    transform: scale(0.95); /* Efeito de "pressionar" */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida */
+}
+
+/* Estilos para o botão de fechar */
+#theme-selector button[onclick="closeThemeSelector()"] {
+    background-color: #ddd; /* Cor de fundo cinza */
+    color: #333; /* Cor do texto */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 18px; /* Aumentando o tamanho da fonte */
+    cursor: pointer;
+    margin-top: 15px; /* Espaço acima do botão de fechar */
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra projetada */
+    width: 100%; /* Largura igual aos outros botões */
+    max-width: 200px; /* Largura máxima */
+}
+
+#theme-selector button[onclick="closeThemeSelector()"]:hover {
+    background-color: #ccc; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Efeito de "zoom" */
+}
+
+#theme-selector button[onclick="closeThemeSelector()"]:active {
+    transform: scale(0.95); /* Efeito de pressionar */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida */
+}

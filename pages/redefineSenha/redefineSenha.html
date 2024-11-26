@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redefina Senha</title>
+    <link rel="stylesheet" href="../../css/crud.css" />
+    <link rel="icon" type="image/x-icon" href="../../../img/jdoLogo2.png" />
+</head>
+</head>
+
+<body class="fundoSelva">
+    <!-- Logo no canto superior direito -->
+<div class="logo-container">
+    <img id="imgLogo" src="./img/jdoLogo1.png" alt="Logo" />
+</div>
+
+    <div class="text-center">
+        <img id="imgLogo" class="resize-img" draggable="false" src="../../img/jdoLogo.png" width="40%" alt="" />
+    </div>
+    <div class="w-37 p-1em rounded d-block bg-white esqueceu-container">
+        <h2 class="titulo-destaque">REDEFINIR SENHA</h2>
+        <p class="subtitulo-destaque">Crie uma nova senha:</p>
+        <form class="form-container" action="">
+            <div class="form-grid mb-3">
+                <label for="senha">* Nova Senha</label>
+                <input class="input-reset" type="password" name="senha" id="senha" placeholder="Crie sua nova senha..." />
+
+                <label for="confirmaSenha">* Confirmar Senha</label>
+                <input class="input-reset" type="password" name="confirmaSenha" id="confirmaSenha" placeholder="Confirme sua nova senha..."/>
+            </div>
+
+            <p class="msg-err text-center text-red"></p>
+
+            <div class="mb-1 d-flex justify-around">
+                <button class="btn pointer bg-red" type="button" id="btn-voltar" onclick="history.go(-1);">
+                    VOLTAR AO INÍCIO
+                </button>
+
+                <button class="btn pointer bg-green" type="button" id="btn-salvar">
+                    CONFIRMAR
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

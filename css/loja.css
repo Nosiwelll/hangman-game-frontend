@@ -1,0 +1,212 @@
+  /* Estilo do Ícone da Loja */
+  .shop-icon {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    height: 200px;
+    width: 40%;
+  }
+  
+  .shop-icon img {
+    width: 15%;
+    margin-top: 30px;
+  }
+
+  /* Estilo do Modal */
+  .shop-modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .shop-content {
+    padding-top: 40px; /* Dá espaço para o botão de fechar */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    border: 4px solid #F06C5E; /* Borda com a cor desejada */
+    max-width: 1000px; /* Aumenta a largura máxima */
+    width: 120%; /* Ocupa 80% da largura da tela */
+    height: 80%; /* Ocupa 80% da altura da tela */
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo for maior que a altura */
+    max-height: 80vh; /* Limita a altura do modal */
+    position: relative; /* Necessário para posicionar o botão de fechar */
+  }
+
+/* Estilo do botão de fechar */
+.close-button {
+  margin-top: 5px;
+  position: absolute; /* Posiciona em relação ao modal */
+  top: 20px; /* Distância do topo do modal */
+  right: 10px; /* Distância da direita do modal */
+  font-size: 24px; /* Tamanho do ícone */
+  color: #fff; /* Cor do texto */
+  background-color: #F06C5E; /* Cor de fundo */
+  border: none; /* Remove bordas */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1010; /* Garante estar acima do conteúdo do modal */
+}
+
+.close-button:hover {
+  background-color: #e05c4e; /* Efeito hover */
+  border-radius: 100%; /* Botão arredondado */
+}
+
+  .user-info {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  /* Estilo para exibir o ícone do usuário e o nome na mesma linha */
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o ícone e o nome */
+    margin-bottom: 15px;
+  }
+
+  .user-info img.user-icon {
+    width: 50px;
+  }
+
+  .profile-info p#user-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .user-items div {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 18px;
+  }
+
+  .user-items img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .user-items {
+    display: flex;
+    gap: 10px; /* Espaço entre as caixinhas */
+}
+
+  .item-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .shop-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px; /* Tamanho maior para a fonte */
+    background-color: #ffffff; /* Fundo cinza */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaço entre itens */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+  }
+
+/* Estilo dos ícones dos itens */
+.shop-item img {
+    width: 40px; /* Aumenta o tamanho dos ícones */
+    height: 40px;
+    margin-right: 15px; /* Espaço entre o ícone e o nome do item */
+    object-fit: contain;
+    margin-left: 12px;
+}
+
+/* Alinhar o nome dos itens à esquerda */
+.shop-item span {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 18px; /* Ajuste para um tamanho de fonte maior */
+}
+
+/* Estilo dos botões de compra com moedas */
+.shop-item button {
+    padding: 8px 18px;
+    font-size: 18px;
+    background-color: #F06C5E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 12px;
+  }
+  
+  .shop-item button .icon-moeda, /* Aplica-se ao elemento com a classe .icon-moeda dentro de .shop-item > button */
+  .shop-item button .icon-diamante { /* Aplica-se ao elemento com a classe .icon-diamante dentro de .shop-item > button */
+      width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+      height: 30px;
+  }
+  
+
+/* Efeito hover para o botão de compra */
+.shop-item button:hover {
+    background-color: #e05c4e;
+}
+
+/* Estilo das caixinhas circulares */
+.user-items div {
+    background-color: #f0f0f0;
+    width: 120px; /* Aumenta o tamanho da caixinha */
+    height: 60px;
+    border-radius: 25px; /* Mantém a caixinha circular */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça o ícone e a quantidade */
+    padding: 0 18px; /* Espaçamento interno */
+    font-size: 20px; /* Aumenta o tamanho do número */
+    font-weight: bold;
+}
+
+.user-items img {
+    width: 60px; /* Ajusta o tamanho do ícone */
+    height: 60px;
+    margin: 0; /* Remove margem para alinhamento */
+    object-fit: contain;
+}
+
+/* Estilo para o título da loja com ícone */
+.shop-title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o ícone e o texto */
+    font-size: 1.5em; /* Ajuste o tamanho da fonte se necessário */
+    justify-content: center; /* Linha adicionada para centralizar */
+}
+
+/* Estilo do ícone da loja ao lado do título */
+.icon-shop-title {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+#lampada_inventario {
+  width: 40px;
+}

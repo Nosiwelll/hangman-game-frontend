@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../../css/crud.css" />
+    <link rel="icon" type="image/x-icon" href="../../../../img/jdoLogo2.png" />
+</head>
+<body class="fundoSelva">
+    <!-- Logo no canto superior direito -->
+    <div class="logo-container">
+        <img id="imgLogo" src="../../img/jdoLogo1.png" alt="Logo" />
+    </div>
+    <div class="w-37 p-1em rounded d-block bg-white cadastro-container">
+        <h2 class="titulo-destaque">CADASTRE-SE</h2>
+        <form class="form-container" method="post" action="">
+            <div class="form-grid mb-3">
+                <label for="nome">* Nome</label>
+                <input class="input-reset" type="text" id="nome" placeholder="Digite seu nome..." required />
+
+                <label for="email">* Email</label>
+                <input class="input-reset" type="email" id="email" placeholder="Digite seu email..." required />
+
+                <label for="login">* Usuário</label>
+                <input class="input-reset" type="text" id="login" placeholder="Crie um nome de usuário..." required />
+
+                <label for="senha">* Senha</label>
+                <input class="input-reset" type="password" id="senha" placeholder="Crie uma senha..." 
+                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$" 
+                       title="A senha deve ter no mínimo 8 caracteres, incluindo uma letra maiúscula, uma minúscula, um número e um caractere especial." required />
+
+                <label for="confirmar-senha">* Confirmar Senha</label>
+                <input class="input-reset" type="password" id="confirmar-senha" placeholder="Confirme a senha..." required />
+            </div>
+
+            <div class="mb-1 d-flex justify-around">
+                <button class="btn bg-red" type="button" id="btn-voltar" onclick="history.go(-1);">VOLTAR</button>
+                <button class="btn bg-green" type="submit" id="btn-cad">CONFIRMAR</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../../pages/signup/localStorageCadastro.js"></script>
+</body>
+</html>

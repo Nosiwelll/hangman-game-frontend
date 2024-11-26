@@ -1,0 +1,77 @@
+/* Remove a rolagem vertical */
+body.indexpage {
+  overflow: hidden;
+}
+
+/* Logo inicial grande */
+#imgLogoLarge {
+  width: 45%;
+  transition: opacity 1.5s ease;
+}
+
+/* Logo menor para a exibição final */
+#imgLogoSmall {
+  width: 30%;
+  margin-bottom: 1em;
+}
+
+/* Centraliza a logo grande */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Container para a logo pequena e botões */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Exibe a logo pequena e os botões */
+.content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Centraliza e espaça os botões */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+/* Estilo para ambos os botões */
+.btn-jogo {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 50px;
+  width: 200px;
+  max-width: 180px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.7);
+  background: #F16C5F;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-jogo:hover {
+  color: #F16C5F;
+  background: #fff;
+}
+
+/* Oculta inicialmente */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+

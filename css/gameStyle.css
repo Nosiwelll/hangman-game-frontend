@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+:root {
+    --green: #1E90FF; /* Substituindo verde por um tom de azul claro */
+    --red: #4169E1;   /* Substituindo vermelho por um tom de azul escuro */
+}
+
+body {
+    font-family: "JetBrains Mono", monospace;
+    margin: 0; /* Remove qualquer margem padrão que o corpo possa ter */
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+}
+
+.text-center {
+    text-align: center;
+}
+
+body {
+    background-image: linear-gradient(rgba(202, 202, 202, 0.2), rgba(202, 202, 202, 0.2)), url('../img/fundo_faroesteGame.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+#minha-lista-2 {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex: 1; /* Expande essa seção para ocupar o máximo de espaço */
+}
+
+.contador {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#user-config-section {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin-right: 70px;  
+    padding-bottom: 63.5px;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+#btn-config{
+    list-style: none;
+    width: 20px;   
+    justify-content:flex-end;
+}
+
+.logo-hang{
+    width: 170px;
+    margin-bottom: 55px;
+}
+
+/* Posicionamento da forca no canto direito */
+
+.forca-faroeste {
+  position: relative;
+  left: -5%;
+  top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forca-natal {
+  position: relative;
+  left: -5%;
+  top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forca-halloween {
+  position: relative;
+  left: -5%;
+  top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forca-mar {
+  position: relative;
+  left: -5%;
+  top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.forca-img {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    top: -200;
+    left: 0;
+}
+
+/* Posicionamento da palavra no centro da tela */
+.palavra-container {
+    position: absolute;
+    top: 55%;
+    left: 47.5%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.palavra-img {
+    width: 120%;
+    height: auto;
+}
+
+/* Posicionamento dos poderes no canto inferior esquerdo */
+.poderes-container {
+    position: absolute;
+    right: 2%;
+    bottom: 6%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Formatação do texto de quantidade */
+.poderes-container span {
+    font-size: 1.5rem; /* Ajuste para o tamanho desejado */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px; /* Espaçamento entre o ícone e o texto */
+    display: inline-block;
+    text-shadow:     -2px -2px 0 #000,  /* Contorno preto superior esquerdo */
+    2px -2px 0 #000,  /* Contorno preto superior direito */
+   -2px  2px 0 #000,  /* Contorno preto inferior esquerdo */
+    2px  2px 0 #000,  /* Contorno preto inferior direito */
+   -2px  0px 0 #000,  /* Contorno preto à esquerda */
+    2px  0px 0 #000,  /* Contorno preto à direita */
+    0px -2px 0 #000,  /* Contorno preto acima */
+    0px  2px 0 #000;  /* Contorno preto abaixo */;
+}
+
+
+.poder-img {
+    width: 130px;
+    height: auto;
+}
+
+.poder-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px; /* Espaçamento entre os poderes */
+}
+
+.poder-quantidade {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 5px; /* Espaçamento entre a imagem e o texto */
+    text-shadow: 
+    1px 1px 0px #444444, /* Sombra cinza escuro para profundidade */
+   -1px -1px 0px #444444, 
+    2px 2px 0px #222222, /* Mais profundidade no efeito */
+    0px 0px 5px rgba(255, 255, 255, 0.8); /* Brilho suave ao redor do texto */
+}
+
+.player-icon {
+    position: absolute;
+    top: 37%; /* Ajuste a posição vertical conforme necessário */
+    right: 18%; /* Ajuste a posição horizontal conforme necessário */
+    transform: translate(-50%, -50%); /* Centraliza o ícone no ponto especificado */
+    width: 70px; /* Largura do ícone */
+    height: 70px; /* Altura do ícone */
+    z-index: 10; /* Garante que o ícone esteja na frente de outros elementos */
+  }
+  
+  .player-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Ajuste conforme necessário */
+  }
+  
+  .player-icon .player-name {
+    font-size: 1.7rem; /* Tamanho da fonte para o nome */
+    color: #ffffff;       /* Cor do texto */
+    margin-top: 10px;  /* Espaço entre o ícone e o nome */
+    font-weight: bold; /* Estilo do texto */
+    text-align: center; 
+    text-shadow: 
+    -2px -2px 0 #000,  /* Contorno preto superior esquerdo */
+     2px -2px 0 #000,  /* Contorno preto superior direito */
+    -2px  2px 0 #000,  /* Contorno preto inferior esquerdo */
+     2px  2px 0 #000,  /* Contorno preto inferior direito */
+    -2px  0px 0 #000,  /* Contorno preto à esquerda */
+     2px  0px 0 #000,  /* Contorno preto à direita */
+     0px -2px 0 #000,  /* Contorno preto acima */
+     0px  2px 0 #000;  /* Contorno preto abaixo */
+  }
+  
+  .player-icon img {
+    width: 250%;
+    height: auto;
+  }
+  
+  #cacto-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px; /* Ajuste o padding conforme necessário */
+    padding-bottom: 40px; /* Ajuste o padding conforme necessário */
+  }
+  
+  #tema-faroeste .cacto-img {
+    position: relative;
+    width: 160px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    left: 1320px;
+  }
+
+  #tema-faroeste .passaro-img {
+    position: relative;
+    width: 350px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    left: 80px;
+  }
+  
+ /* ELEMENTOS FAROESTE */
+ :root {
+   --escala-geral: 1.35; /* Aumente para escalar globalmente */
+ }
+ 
+ /* Essa classe está escondendo a tela de vitória/derrota   */
+ 
+ .hidden { 
+   display: none;
+ }
+ 
+#vitoria-modal {
+  visibility: hidden;
+}
+
+ .modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.7);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 999;
+ }
+ 
+ /* Conteúdo da modal */
+ .modal-content {
+   background: url('../img/faroeste_telaVitoriaDerrota.png') no-repeat center center;
+   background-size: cover;
+   border-radius: 10px;
+   padding: 20px;
+   text-align: center;
+   color: white;
+   width: 180%;
+   height: 80%;
+   max-width: 1200px;
+   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+ }
+ 
+ .elementos-modal {
+   padding-top: 240px;
+ }
+ 
+ /* Botões */
+ 
+ .botoes {
+   display: flex; /* Alinha os botões em uma linha */
+   justify-content: center; /* Centraliza os botões no contêiner */
+   gap: 20px; /* Define o espaçamento horizontal entre os botões */
+   margin: 5%;
+ }
+ 
+ .botoes button {
+   cursor: pointer;
+   color: #fff;
+   font-size: 1.2rem;
+   line-height: 50px;
+   width: 250px;
+   max-width: 250px;
+   border: none;
+   box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.7);
+   background: #F16C5F;
+   transition: background 0.3s, color 0.3s;
+   margin: 0 50px;
+   font-family: 'Press Start 2P', cursive; /* A pixel font */
+   box-shadow: 
+     inset -1px 1px 1px 1px rgb(255, 255, 255),
+     inset -1px -1px 1px 1px rgb(255, 255, 255),
+     inset 1px 0px 1px 1px rgb(255, 255, 255);  
+     border-radius: 30px;
+ }
+ 
+ .botoes button:hover {
+   color: #F16C5F;
+   background: #fff;
+ }
+ 
+ .botoes button:active {
+   top: 5px;
+   box-shadow: 
+   -4px 2px 1px 1px grey,
+   -4px -2px 1px 1px lightgray,
+   4px 0px 1px 1px lightgray; 
+ }
+ 
+ .vitoria-ou-derrota {
+   transform: scale(var(--escala-geral));
+   font-size: calc(3rem * var(--escala-geral));
+ }
+ 
+ .tempo-decorrido {
+   transform: scale(var(--escala-geral));
+   font-size: calc(1rem * var(--escala-geral));
+ }
+ 
+ .botoes button {
+   transform: scale(var(--escala-geral));
+   font-size: calc(0.65rem * var(--escala-geral));
+   width: calc(180px * var(--escala-geral));
+ }
+ 
+ .botoes {
+   margin: calc(5% * var(--escala-geral));
+ }
+ 
+ .botoes button {
+   line-height: calc(42px * var(--escala-geral));
+ }
+
+  .keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 350px;
+    z-index: 9999;
+  }
+  
+  .keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .key {
+    width: 55px;
+    height: 70px;
+    margin: 5px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #fc7a6f;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .key:hover {
+    background-color: #FF7265;
+  }
+  
+  .key:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+
+/* ELEMENTOS NATAL */
+
+#tema-natal .cervo-img {
+  position: relative;
+  left: 150px;
+  width: 190px; 
+}
+
+#tema-natal .boneco-img {
+  position: relative;
+  width: 190px; /* Ajuste o tamanho conforme necessário */
+  left: 1320px;
+}
+
+  #tema-natal .key {
+    width: 55px;
+    height: 70px;
+    margin: 5px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #2b8f22;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  #tema-natal .key:hover {
+    background-color: #37B82C;
+  }
+  
+  #tema-natal .key:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+
+  /* ELEMENTOS HALLOWEEN */
+
+  #tema-halloween .gato-img {
+    position: relative;
+    width: 190px; /* Ajuste o tamanho conforme necessário */
+    left: 1330px;
+  }
+
+  #tema-halloween .abobora-img {
+    position: relative;
+    left: 150px;
+    width: 190px; 
+  }
+
+  #tema-halloween .key {
+    width: 55px;
+    height: 70px;
+    margin: 5px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #5e2fe0;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  #tema-halloween .key:hover {
+    background-color: #481DBF;
+  }
+  
+  #tema-halloween .key:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+
+  /* ELEMENTOS FUNDO DO MAR */
+  #tema-mar .key {
+    width: 55px;
+    height: 70px;
+    margin: 5px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #1F789A;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  #tema-mar .key:hover {
+    background-color: #2899C4;
+  }
+  
+  #tema-mar .key:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  #mar-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px; /* Ajuste o padding conforme necessário */
+  padding-bottom: 40px; /* Ajuste o padding conforme necessário */
+  gap: 30px;
+}
+
+  #tema-mar .arraia-img {
+    position: relative;
+    width: 220px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    left: 280%;
+  }
+
+  #tema-mar .peixe-img {
+    position: relative;
+    left: 100px;
+    width: 240px; 
+  }
+
+  #user-config-section {
+    position: fixed;
+    top: 10px;
+    right: -50px;
+    display: flex;
+    flex-direction: row; /* Organiza os itens em uma linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 15px; /* Espaçamento horizontal entre os botões */
+    z-index: 1000; /* Garante que os botões fiquem acima de outros elementos */
+  }
+
+/* Botão de som */
+#sound-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sound-icon {
+    font-size: 40px;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+#sound-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Botão de perfil */
+#lista-usuario {
+    width: 50px;
+    height: 50px;
+}
+
+.img-usuario {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Botão de configurações */
+#btn-config {
+    width: 50px;
+    height: 50px;
+}
+
+.img-config {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}

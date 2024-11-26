@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="fundoSelva" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HangGame</title>
+
+    <link rel="stylesheet" href="../../css/lobbyStyle.css" />
+    <link rel="stylesheet" href="../../css/inicial.css" />
+    <link rel="stylesheet" href="../../css/comoJogar.css" />
+
+    <link rel="icon" type="image/x-icon" href="../../../../img/jdoLogo2.png" />
+</head>
+<body class="indexpage">
+    <!-- Logo inicial grande, que desaparece após alguns segundos -->
+    <div class="logo-container">
+        <img id="imgLogoLarge" draggable="false" src="../../img/jdoLogo1.png" alt="Logo Grande" />
+    </div>
+
+    <!-- Logo menor e botões de Jogar e Como Jogar, ocultos inicialmente -->
+    <div class="content hidden">
+        <img id="imgLogoSmall" draggable="false" src="../../img/jdoLogo1.png" alt="Logo Pequena" />
+        <div class="button-container">
+            <a href="../login/login.html">
+                <button class="btn-jogo">Jogar</button>
+            </a>
+            <button class="btn-jogo" onclick="openModal()">Como Jogar</button>
+        </div>        
+    </div>
+
+    <!-- Modal para instruções -->
+    <div id="instructionsModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-text">
+                <h2>Bem-vindo ao HangGame: O Desafio da Forca Multiplayer!</h2>
+                <p>Prepare-se para um duelo de mentes rápidas e apostas altas! Aqui está tudo o que você precisa saber para se dar bem neste campo de batalha de letras:</p>
+
+                <h3>Objetivo:</h3>
+                <p>Adivinhe a palavra secreta antes do seu oponente — mas atenção: o tempo está correndo!</p>
+
+                <h3>Como Jogar:</h3>
+                <ul>
+                    <li><strong>Escolha uma Letra:</strong> Cada jogador tem 15 segundos para adivinhar uma letra. Acerte para revelar partes da palavra e chegar mais perto da vitória!</li><br>
+                    <li><strong>Tempo Total:</strong> Você e seu oponente têm 1 minuto e meio para decifrar a palavra antes que o jogo termine. O tempo é seu aliado... ou inimigo!</li><br>
+                    <li><strong>Poderes Especiais:</strong> No lobby, você encontrará uma loja cheia de poderes e vantagens que podem ser adquiridos antes do jogo. Cada poder pode te dar um empurrãozinho extra!</li><br>
+                </ul>
+                <p>Pronto para desafiar seus amigos e provar que você é o mestre das palavras? Boa sorte... e que vença o melhor detetive de letras!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../pages/home/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* Estilos para o modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal estilizado */
+.modal-content {
+  background: linear-gradient(135deg, #78caeb, #5fa9da, #6ccffd); /* Gradiente branco */
+  border: 2px solid #F16C5F;
+  border-radius: 12px;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  color: #F5DEB3;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+  width: 90%; /* Aumenta a largura relativa */
+  max-width: 800px; /* Permite uma largura máxima maior */
+}
+
+/* Estilo com contorno branco para o título principal */
+.modal-content h2 {
+  color: #F16C5F;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 0 #000000, 
+  0 2px 0 #302f2f,
+  0 3px 0 #222222,
+  0 4px 0 #464646,
+  0 5px 0 #080808,
+  0 6px 1px rgba(0, 0, 0, 0.1),
+  0 0 5px rgba(0,0,0,.1),
+  0 1px 3px rgba(0,0,0,.3),
+  0 3px 5px rgba(0,0,0,.2),
+  0 5px 10px rgba(0,0,0,.25),
+  0 10px 10px rgba(0,0,0,.2),
+  0 20px 20px rgba(0,0,0,.15);
+}
+
+/* Estilo com contorno branco para subtítulos */
+.modal-content h3 {
+  color: #F16C5F;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 0 #000000, 
+  0 2px 0 #302f2f,
+  0 3px 0 #222222,
+  0 4px 0 #464646,
+  0 5px 0 #080808,
+  0 6px 1px rgba(0, 0, 0, 0.1),
+  0 0 5px rgba(0,0,0,.1),
+  0 1px 3px rgba(0,0,0,.3),
+  0 3px 5px rgba(0,0,0,.2),
+  0 5px 10px rgba(0,0,0,.25),
+  0 10px 10px rgba(0,0,0,.2),
+  0 20px 20px rgba(0,0,0,.15);
+}
+
+/* Estilo para o texto geral */
+.modal-content p, .modal-content li {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333333;
+}
+
+/* Estilo para listas */
+.modal-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.modal-content p, .modal-content li {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.modal-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #FFD700;
+  cursor: pointer;
+}
+
+/* Efeito de botão ao passar o mouse */
+.close:hover {
+  color: #F16C5F;
+  transform: scale(1.1);
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Ocultar o modal inicialmente */
+.hidden {
+  display: none;
+}
+
+/* Remover a rolagem da página */
+body.indexpage {
+  overflow: hidden;
+}
+
+/* Animações e efeitos para o logo e botões */
+#imgLogoLarge {
+  width: 45%;
+  transition: opacity 1.5s ease;
+}
+
+#imgLogoSmall {
+  width: 30%;
+  margin-bottom: 1em;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  z-index: 999;
+}
+
+.content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.btn-jogo {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 50px;
+  width: 200px;
+  max-width: 180px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 4px 7px 13px 0px rgba(0, 0, 0, 0.7);
+  background: #F16C5F;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-jogo:hover {
+  color: #F16C5F;
+  background: #fff;
+}
+
+/* Oculta inicialmente */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
